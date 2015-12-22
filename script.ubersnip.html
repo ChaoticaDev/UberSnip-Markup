@@ -1,0 +1,19 @@
+<--(ubersnip{
+	<var name="Users" raw-value="array()" />
+    <function name="ConnectMySQL" params="null">
+    	<define name="Users" />
+    	<array name-set="mysql_auth_data" name="$host,$username,$password,$db" value="'ubersnip.com','advoice','advoicemusic','advoice_musicstore'" />
+        <call function="mysqli_connect" params="$host, $username,$password, $db" data-init-variable="DB">
+        <var name="q" value="SELECT * FROM users" />
+        <call function="mysqli_query" params="$DB,$q" data-init-variable="query" />
+        <repeat condition="$row = mysqli_fetch_array ( $query, MYSQL_ASSOC)">
+        	<call function="array_push" params="$Users,$row" />
+        </repeat>
+        
+    </function>
+    <call function="ConnectMySQL" params="null" />
+    <call function="var_dump" params="$Users" />
+    
+    
+    <!--<UObject type="Database::Handler" host="localhost" username="advoice" password="advoice_music" />-->
+})-->
