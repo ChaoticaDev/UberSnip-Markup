@@ -2,7 +2,7 @@
 Harness the power of PHP using HTML Markup
 
 # Overview
-  UberSnipMarkup simply put, is a lexer; HTML markup is parsed, converted to PHP, and then executed. You can harness the power of PHP using pure Markup code.
+  UberSnipMarkup simply put, is a lexer; HTML markup is parsed, converted to PHP, and then executed. You can harness the power of PHP using almost pure Markup code.
   
   
 ##  Usage
